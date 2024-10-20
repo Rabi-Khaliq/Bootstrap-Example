@@ -1,0 +1,411 @@
+body{
+  color: black;
+  overflow-x: hidden;
+}
+.logo{
+  font-family: "Great Vibes", cursive;
+  font-size: 48px;
+  font-weight: 400;
+  color: black;
+  padding-left: 100px;
+}
+.bsnav{
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 300px;
+}
+.bsnav a:hover{
+  color: #336dd5;
+}
+.search-header input {
+  font-size: 15px;
+  border-radius: 30px 0 0 30px;
+  background: #fff;
+  padding: 8px 15px;
+  color: #060606;
+  border: 2px solid #eee;
+  border-right: none;
+  margin-left: 50px;
+}
+.search-header button.btn-style{
+  border-radius: 0 30px 30px 0;
+  box-shadow: none;
+  padding: 6px 13px;
+  font-size: 15px;
+}
+.search-header button.btn-style:hover{
+  border-color: #4581ed;
+  background: #4581ed;
+  color: #fff;
+}
+.bsblock{
+  /* border: 2px solid green; */
+  margin-bottom: 100px;
+  margin-right: 180px;
+}
+.banner-content h3 {
+  color: #060606;
+  font-size: 75px;
+  line-height: 85px;
+  font-family: 'Great Vibes', cursive;
+}
+
+.banner-content p {
+  color: black;
+  font-size: 18px;
+}
+.btn-style {
+  padding: 10px 28px 11px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  outline: none;
+  border: 2px solid #336dd5;
+  background: #336dd5;
+  transition: all 1.8s ease-in-out;
+}
+.btn-style:hover{
+  color: #336dd5;
+  border-color: #336dd5;
+  background: transparent;
+}
+
+/* Media Query */
+/* Media Query for Tablets and Smaller Devices (max-width: 768px) */
+@media screen and (max-width: 786px) {
+  .logo {
+    font-size: 36px; /* Reduce logo font size */
+    padding-left: 50px; /* Adjust padding for smaller screens */
+  }
+
+  .bsnav {
+    font-size: 14px; /* Adjust font size for navigation */
+    padding-left: 100px; /* Adjust padding for navigation */
+  }
+
+  .search-header input {
+    margin-left: 20px; /* Reduce margin for search bar */
+    width: 60%; /* Adjust width for search input */
+  }
+
+  .banner-content h3 {
+    font-size: 50px; /* Decrease heading font size */
+    line-height: 60px; /* Adjust line height */
+  }
+
+  .banner-content p {
+    font-size: 16px; /* Slightly decrease paragraph font size */
+  }
+
+  .btn-style {
+    padding: 8px 20px; /* Reduce padding for buttons */
+    font-size: 14px; /* Adjust button font size */
+  }
+}
+
+/* Media Query for Mobile Phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 28px; /* Further reduce logo font size */
+    padding-left: 30px; /* Decrease padding for mobile */
+  }
+
+  .bsnav {
+    font-size: 12px; /* Reduce navigation font size for mobile */
+    padding-left: 50px; /* Further reduce padding */
+  }
+
+  .bsnav a {
+    display: block; /* Stack navigation links vertically */
+    margin-bottom: 10px; /* Add margin between nav items */
+  }
+
+  .search-header input {
+    margin-left: 10px; /* Reduce margin for search bar */
+    width: 50%; /* Further adjust width */
+  }
+
+  .banner-content h3 {
+    font-size: 35px; /* Further decrease heading font size */
+    line-height: 45px; /* Adjust line height */
+  }
+
+  .banner-content p {
+    font-size: 14px; /* Further decrease paragraph font size */
+  }
+
+  .btn-style {
+    padding: 6px 15px; /* Further reduce padding for buttons */
+    font-size: 12px; /* Reduce button font size */
+  }
+}
+/* ///////////////////////////////////////////////// */
+/* Booking section */
+.section2{
+  margin-top: 150px;
+}
+form.form-styles {
+  background: #fff;
+  padding: 50px;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr .8fr 1.2fr;
+  grid-gap: 18px;
+  align-items: center;
+  box-shadow: 0 1rem 3rem #f5f3f3;
+}
+div input,
+div select {
+  background: #f2f5f7;
+  padding: 0px 15px;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 50px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  color: #060606;
+}
+div select {
+  background: rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+div label.form-label {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #060606;
+  font-weight: bold;
+  font-size: 16px;
+}
+/* Default styles for larger screens */
+.section2 {
+  margin-top: 150px;
+}
+form.form-styles {
+  background: #fff;
+  padding: 50px;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr .8fr 1.2fr;
+  grid-gap: 18px;
+  align-items: center;
+  box-shadow: 0 1rem 3rem #f5f3f3;
+}
+div input,
+div select {
+  background: #f2f5f7;
+  padding: 0px 15px;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 50px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  color: #060606;
+}
+div select {
+  background: rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+div label.form-label {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #060606;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Mobile Devices (up to 600px) */
+@media only screen and (max-width: 600px) {
+  .section2 {
+    margin-top: 50px;
+  }
+
+  form.form-styles {
+    padding: 20px;
+    grid-template-columns: 1fr; /* Stacking form fields vertically */
+    grid-gap: 10px;
+  }
+
+  div input,
+  div select {
+    font-size: 14px;
+    height: 40px;
+    padding: 0 10px;
+  }
+
+  div label.form-label {
+    font-size: 14px;
+  }
+}
+
+/* Tablets and smaller screens (up to 768px) */
+@media only screen and (max-width: 768px) {
+  .section2 {
+    margin-top: 100px;
+  }
+
+  form.form-styles {
+    padding: 30px;
+    grid-template-columns: 1fr 1fr; /* Two columns layout for tablet */
+    grid-gap: 15px;
+  }
+
+  div input,
+  div select {
+    font-size: 15px;
+    height: 45px;
+  }
+
+  div label.form-label {
+    font-size: 15px;
+  }
+}
+/* //////////////////////////////////////////////////// */
+ /* Default styles for larger screens */
+.bscon {
+  margin-left: 250px;
+  margin-top: 50px;
+  text-align: left; /* Align content to the left */
+}
+
+.bscon h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  color: #336dd5;
+  font-weight: 400;
+  text-align: left; /* Align text to the left */
+}
+
+.bscon h3 {
+  font-family: "Ubuntu Sans", sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  text-align: left; /* Align text to the left */
+}
+
+.bscon p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #8c8c8c;
+  text-align: left; /* Align text to the left */
+}
+
+.bscon ul.list-style-lis {
+  padding-left: 0; /* Remove default padding for unordered list */
+}
+
+.bscon ul.list-style-lis li {
+  list-style: none;
+  color: #060606;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left; /* Align list items to the left */
+}
+
+.bscon ul.list-style-lis li i {
+  color: #336dd5;
+  margin-right: 6px;
+}
+
+/* Mobile Devices (up to 600px) */
+@media only screen and (max-width: 600px) {
+  .bscon {
+    margin-left: 20px;
+    margin-top: 20px;
+    border-width: 1px;
+  }
+
+  .bscon h2 {
+    font-size: 24px;
+  }
+
+  .bscon h3 {
+    font-size: 28px;
+  }
+
+  .bscon p,
+  .bscon ul.list-style-lis li {
+    font-size: 14px;
+  }
+
+  .bscon ul.list-style-lis li i {
+    margin-right: 4px;
+  }
+}
+
+/* Tablets and smaller screens (up to 768px) */
+@media only screen and (max-width: 768px) {
+  .bscon {
+    margin-left: 50px;
+    margin-top: 30px;
+    border-width: 1.5px;
+  }
+
+  .bscon h2 {
+    font-size: 28px;
+  }
+
+  .bscon h3 {
+    font-size: 32px;
+  }
+
+  .bscon p,
+  .bscon ul.list-style-lis li {
+    font-size: 15px;
+  }
+
+  .bscon ul.list-style-lis li i {
+    margin-right: 5px;
+  }
+}
+/* ////////////////////////// */
+.bs-tours{
+  margin-top: 50px;
+}
+.bstour p{
+  font-family: "Great Vibes", cursive;
+  font-size: 32px;
+  color: #336dd5;
+  font-weight: 400;
+  line-height: 26px;
+}
+.bstour h3{
+  font-family: "Ubuntu Sans", sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  color: #060606;
+}
+.bs-stars{
+  display: flex;
+  gap: 5px;
+}
+.bs-stars li{
+  list-style: none;
+  color: #FFA127;
+}
+.bs-stars span li{
+  color: #8c8c8c;
+}
+.bs-con a.zoom-image {
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  border-radius: 8px 8px 0 0;
+}
+.bs-con:hover img.scale-image {
+  transform: scale(1.1);
+  transition: transform 0.3s linear;
+}
+.bs-con a{
+  font-size: 20px;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: 600;
+text-decoration: none;
+color: #060606;
+}
+.bs-con a:hover{
+  color: #336dd5;
+}
