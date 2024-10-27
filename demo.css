@@ -1,6 +1,11 @@
-body{
-  color: black;
-  overflow-x: hidden;
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto;   /* Manage vertical scrolling */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 .logo{
   font-family: "Great Vibes", cursive;
@@ -72,75 +77,129 @@ body{
   background: transparent;
 }
 
-/* Media Query */
-/* Media Query for Tablets and Smaller Devices (max-width: 768px) */
-@media screen and (max-width: 786px) {
+/* For tablets (screens with width between 768px and 1024px) */
+@media (max-width: 1024px) {
   .logo {
-    font-size: 36px; /* Reduce logo font size */
-    padding-left: 50px; /* Adjust padding for smaller screens */
+    font-size: 36px;
+    padding-left: 50px;
   }
 
   .bsnav {
-    font-size: 14px; /* Adjust font size for navigation */
-    padding-left: 100px; /* Adjust padding for navigation */
+    padding-left: 150px;
+    font-size: 14px;
   }
 
   .search-header input {
-    margin-left: 20px; /* Reduce margin for search bar */
-    width: 60%; /* Adjust width for search input */
+    font-size: 14px;
+    margin-left: 30px;
+    padding: 6px 12px;
+  }
+
+  .search-header button.btn-style {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .bsblog {
+    margin-right: 100px;
   }
 
   .banner-content h3 {
-    font-size: 50px; /* Decrease heading font size */
-    line-height: 60px; /* Adjust line height */
+    font-size: 60px;
+    line-height: 70px;
   }
 
   .banner-content p {
-    font-size: 16px; /* Slightly decrease paragraph font size */
-  }
-
-  .btn-style {
-    padding: 8px 20px; /* Reduce padding for buttons */
-    font-size: 14px; /* Adjust button font size */
+    font-size: 16px;
   }
 }
 
-/* Media Query for Mobile Phones (max-width: 480px) */
-@media screen and (max-width: 480px) {
+/* For mobile devices (screens with width less than 768px) */
+@media (max-width: 768px) {
   .logo {
-    font-size: 28px; /* Further reduce logo font size */
-    padding-left: 30px; /* Decrease padding for mobile */
+    font-size: 28px;
+    padding-left: 20px;
   }
 
   .bsnav {
-    font-size: 12px; /* Reduce navigation font size for mobile */
-    padding-left: 50px; /* Further reduce padding */
-  }
-
-  .bsnav a {
-    display: block; /* Stack navigation links vertically */
-    margin-bottom: 10px; /* Add margin between nav items */
+    padding-left: 50px;
+    font-size: 12px;
   }
 
   .search-header input {
-    margin-left: 10px; /* Reduce margin for search bar */
-    width: 50%; /* Further adjust width */
+    font-size: 13px;
+    margin-left: 20px;
+    padding: 5px 10px;
+  }
+
+  .search-header button.btn-style {
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+
+  .bsblog {
+    margin-right: 50px;
+    margin-bottom: 50px;
   }
 
   .banner-content h3 {
-    font-size: 35px; /* Further decrease heading font size */
-    line-height: 45px; /* Adjust line height */
+    font-size: 45px;
+    line-height: 55px;
   }
 
   .banner-content p {
-    font-size: 14px; /* Further decrease paragraph font size */
+    font-size: 14px;
   }
 
   .btn-style {
-    padding: 6px 15px; /* Further reduce padding for buttons */
-    font-size: 12px; /* Reduce button font size */
+    font-size: 14px;
+    padding: 8px 20px;
   }
 }
+
+/* For very small devices (screens with width less than 480px) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 24px;
+    padding-left: 10px;
+  }
+
+  .bsnav {
+    padding-left: 20px;
+    font-size: 10px;
+  }
+
+  .search-header input {
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 4px 8px;
+  }
+
+  .search-header button.btn-style {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+
+  .bsblog {
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+
+  .banner-content h3 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .banner-content p {
+    font-size: 12px;
+  }
+
+  .btn-style {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
+}
+
 /* ///////////////////////////////////////////////// */
 /* Booking section */
 .section2{
@@ -383,12 +442,16 @@ div label.form-label {
   display: flex;
   gap: 5px;
 }
+.bs-stars li i{
+  font-size: 16px;
+}
 .bs-stars li{
   list-style: none;
   color: #FFA127;
 }
 .bs-stars span li{
   color: #8c8c8c;
+  font-size: 16px;
 }
 .bs-con a.zoom-image {
   overflow: hidden;
@@ -409,3 +472,792 @@ color: #060606;
 .bs-con a:hover{
   color: #336dd5;
 }
+.bs-p i{
+  color: #336dd5;
+  font-size: 15px;
+}
+.bs-p{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  color: #8c8c8c;
+}
+.to-price label{
+  color: #8c8c8c;
+}
+.to-price span {
+  color: #336dd5;
+  font-size: 24px;
+  font-weight: bold;
+}
+.bs-card-last .btn-style{
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: #336dd5;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .bs-tours {
+      margin-top: 20px; /* Reduced margin for mobile */
+  }
+
+  .bstour p {
+      font-size: 24px; /* Smaller font size for paragraphs */
+      line-height: 22px; /* Adjusted line height */
+  }
+
+  .bstour h3 {
+      font-size: 28px; /* Smaller font size for h3 */
+  }
+
+  .bs-stars {
+      flex-direction: row; /* Maintain flex direction */
+  }
+
+  .bs-stars li {
+      font-size: 18px; /* Smaller font size for stars */
+  }
+
+  .bs-con a {
+      font-size: 18px; /* Adjusted font size for links */
+  }
+
+  .bs-p {
+      font-size: 14px; /* Smaller font size for paragraph */
+  }
+
+  .to-price span {
+      font-size: 20px; /* Adjusted font size for price */
+  }
+
+  .bs-card-last .btn-style {
+      font-size: 14px; /* Smaller font size for buttons */
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .bs-tours {
+      margin-top: 40px; /* Moderate margin for tablets */
+  }
+
+  .bstour p {
+      font-size: 28px; /* Moderate font size for paragraphs */
+  }
+
+  .bstour h3 {
+      font-size: 32px; /* Moderate font size for h3 */
+  }
+
+  .bs-stars li {
+      font-size: 20px; /* Adjusted font size for stars */
+  }
+
+  .bs-con a {
+      font-size: 18px; /* Adjusted font size for links */
+  }
+
+  .bs-p {
+      font-size: 15px; /* Maintain font size for paragraph */
+  }
+
+  .to-price span {
+      font-size: 22px; /* Adjusted font size for price */
+  }
+
+  .bs-card-last .btn-style {
+      font-size: 15px; /* Moderate font size for buttons */
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1025px) {
+  .bs-tours {
+      margin-top: 50px; /* Original margin for large screens */
+  }
+
+  .bstour p {
+      font-size: 32px; /* Original font size for paragraphs */
+  }
+
+  .bstour h3 {
+      font-size: 38px; /* Original font size for h3 */
+  }
+
+  .bs-stars li {
+      font-size: 22px; /* Original font size for stars */
+  }
+
+  .bs-con a {
+      font-size: 20px; /* Original font size for links */
+  }
+
+  .bs-p {
+      font-size: 15px; /* Maintain font size for paragraph */
+  }
+
+  .to-price span {
+      font-size: 24px; /* Original font size for price */
+  }
+
+  .bs-card-last .btn-style {
+      font-size: 16px; /* Original font size for buttons */
+  }
+}
+
+.w3_stats {
+  background: url(images/map.png) #0e2244 no-repeat center;
+  background-size: cover;
+}
+.counter i {
+  color: #fff;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 17%);
+  font-size: 32px;
+}
+.timer,
+.stats-plus {
+  font-size: 3em;
+  font-weight: bold;
+  color: #fff;
+}
+
+p.count-text {
+  color: #fbfbfb;
+  font-size: 18px;
+  font-weight: 400;
+}
+.title-main p {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  color: #336dd5;
+}
+.bs-block{
+  width: 100vw;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .w3_stats {
+      background: url(images/map.png) #0e2244 no-repeat center; /* Keeping the same background for mobile */
+      background-size: cover;
+  }
+
+  .counter i {
+      width: 60px; /* Smaller width for counter icons */
+      height: 60px; /* Smaller height for counter icons */
+      line-height: 60px; /* Adjust line height accordingly */
+      font-size: 24px; /* Smaller font size for icons */
+  }
+
+  .timer,
+  .stats-plus {
+      font-size: 2em; /* Smaller font size for timer and stats */
+  }
+
+  p.count-text {
+      font-size: 16px; /* Smaller font size for count text */
+  }
+
+  .title-main p {
+      font-size: 24px; /* Smaller font size for title text */
+  }
+
+  .bs-block {
+      width: 100%; /* Full width for blocks on mobile */
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .counter i {
+      width: 70px; /* Moderate size for counter icons */
+      height: 70px;
+      line-height: 70px;
+      font-size: 28px; /* Moderate font size for icons */
+  }
+
+  .timer,
+  .stats-plus {
+      font-size: 2.5em; /* Moderate font size for timer and stats */
+  }
+
+  p.count-text {
+      font-size: 17px; /* Slightly smaller font size for count text */
+  }
+
+  .title-main p {
+      font-size: 30px; /* Moderate font size for title text */
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1025px) {
+  .counter i {
+      width: 80px; /* Original width for counter icons */
+      height: 80px;
+      line-height: 80px;
+      font-size: 32px; /* Original font size for icons */
+  }
+
+  .timer,
+  .stats-plus {
+      font-size: 3em; /* Original font size for timer and stats */
+  }
+
+  p.count-text {
+      font-size: 18px; /* Original font size for count text */
+  }
+
+  .title-main p {
+      font-size: 32px; /* Original font size for title text */
+  }
+
+  .bs-block {
+      width: 100vw; /* Original width for blocks on large screens */
+  }
+}
+
+/* ///////////Service Science/////////////// */
+.service-container{
+  /* border: 2px solid purple; */
+  margin-top: 80px;
+  text-align: center;
+}
+.service-container p{
+  font-family: "Great Vibes", cursive;
+  font-size: 32px;
+  color: #336dd5;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}
+.service-container h3{
+  font-family: "Ubuntu Sans", sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  color: #060606;
+  text-align: center;
+}
+.d-block{
+  text-decoration: none;
+}
+.bottom-block {
+  transition: 0.3s ease-in;
+  background: #f2f5f7;
+  padding: 3rem 2rem;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+
+.bottom-block:hover {
+  transition: 0.3s ease-in;
+  background-color: #fff;
+  box-shadow: 0 1rem 3rem #f5f3f3;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.bottom-block i {
+  font-size: 26px;
+  color: #fff;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  line-height: 75px;
+  background: #336dd5;
+}
+.bottom-block h3 {
+  font-size: 26px;
+  line-height: 35px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.bottom-block p{
+  font-size: 16px;
+  color: #8c8c8c;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+text-decoration: none;
+}
+/* ///////////////End Services Section///////////// */
+
+
+
+/* /////////////////////Feature Section////////////////// */
+.bsfeat{
+  margin-top: 80px;
+}
+
+
+.bsfeat .grids_info h4 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.bsfeat .grids_info i {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  line-height: 65px;
+  text-align: center;
+  font-size: 26px;
+  color: #336dd5;
+  background: rgb(51 109 213 / 8%);
+}
+
+.bsfeat .grids_info {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: flex-start;
+  grid-gap: 20px;
+}
+
+/* //end feature section */
+
+/* blog section */
+.bsblog {
+  margin-top: 50px ;
+  background: #f2f5f7;
+}
+
+.bsblog .blog-grid-1 {
+  transition: 0.3s ease-in;
+  display: block;
+  border-radius: 50%;
+}
+
+.bsblog a.zoom {
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.bsblog a.zoom img {
+  transition: 0.3s ease-in-out;
+}
+
+.bsblog .blog-grid-1:hover img {
+  overflow: hidden;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.bsblog .course-details {
+  position: relative;
+  padding: 30px;
+  background: #fbfbfb;
+  border-radius: 0 0 8px 8px;
+}
+
+.bsblog .course-details:hover a.course-desc {
+  color: #336dd5;
+}
+
+.bsblog .meta-item span {
+  color: #336dd5;
+  width: 18px;
+}
+
+.bsblog span.meta-value {
+  color: #b7b7b7;
+  font-size: 15px;
+}
+
+.meta-item {
+  margin-right: 20px;
+  display: inline-block;
+}
+.bsblog .card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: none;
+}
+
+.meta-item:last-child {
+  margin-right: 0px;
+}
+
+.bsblog a.course-desc {
+  display: block;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 600;
+  color: #060606;
+}
+
+.bsblog .course-price-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #336dd5;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 12px 15px 10px;
+  border-top-right-radius: 8px;
+}
+
+.bsblog .course-price-badge:before {
+  top: 0;
+  border-top: 19px solid #336dd5;
+  content: '';
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+}
+.bsblog .course-price-badge:after {
+  bottom: 0;
+  border-bottom: 19px solid #336dd5;
+  content: '';
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+}
+
+@media (max-width: 1199px) {
+  .bsblog a.course-desc {
+    font-size: 19px;
+    line-height: 28px;
+  }
+
+  .bsblogt .meta-item span {
+    width: 15px;
+  }
+
+  .meta-item {
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 991px) {
+  .bsblog a.course-desc {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+/* //blog section */
+
+
+.bscode h6{
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase
+}
+.bscode h4{
+  font-size: 30px;
+  line-height: 40px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.bscode label{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 10px;
+  display: block;
+  color: #ffffff;
+}
+.bscode form input{
+  background: #fff;
+  color: #060606;
+  border: 1px solid #eee;
+  border-right: none;
+  font-size: 16px;
+  padding: 12px 15px;
+  width: 70%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.bscode form button{
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  width: 160px;
+  border-radius: 0 30px 30px 0;
+  font-weight: 600;
+  padding: 12px;
+  box-shadow: none;
+  background: #336dd5;
+}
+.bscode ul {
+  margin-top: 1em;
+}
+
+.bscode ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.bscode ul li a.app-icon {
+  text-align: center;
+  margin-right: 10px;
+  display: inline-block;
+  color: #336dd5;
+}
+
+.bscode ul li a.app-icon:hover {
+  color: #4581ed;
+}
+
+.bscode a.app-icon span {
+  font-size: 28px;
+}
+
+p.mobile-text-app {
+  font-size: 15px;
+}
+
+
+
+/* footer */
+.bsfooter {
+  background: #0e2244;
+  width: 100vw;
+}
+
+.bsfooter h6.footer-title-29 {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.bsfooter .footer-list-29 ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.bsfooter .footer-list-29 ul li:last-child {
+  margin-bottom: 0px;
+}
+
+.bsfooter .footer-list-29 ul li a,
+.bsfooter .footer-list-29 p a,
+.bsfooter .footer-list-29 p {
+  font-size: 15px;
+  color: #ababab;
+  padding-bottom: 4px;
+}
+
+.bsfooter .footer-list-29 ul li a {
+  display: block;
+}
+
+.bsfooter .footer-list-29 ul li a:hover,
+.bsfooter .footer-list-29 p a:hover {
+  color: #fff;
+}
+
+.bsfooter .footer-list-29 ul li:last-child a,
+.bsfooter .footer-list-29 p {
+  border-bottom: none;
+}
+
+.bsfooter ul.social li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.bsfooter ul.social li:last-child a {
+  margin-right: 0px;
+}
+
+.bsfooter ul.social li a {
+  color: #060606;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #fff;
+  padding-bottom: 0px;
+  text-decoration: none;
+}
+
+.bsfooter ul.social li a:hover {
+  color: #336dd5;
+}
+
+.bsfooter ul.social li a i {
+  font-size: 15px;
+  line-height: 32px;
+}
+
+.bsfooter input[type="email"] {
+  background: #fff;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  outline: none;
+  width: 70%;
+  color: #060606;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.bsfooter button {
+  width: 70%;
+}
+
+p.copy-footer-29 {
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: .5px;
+}
+
+p.copy-footer-29 a {
+  color: #336dd5
+}
+
+p.copy-footer-29 a:hover {
+  color: #4581ed;
+}
+
+/* Devices up to 767px (tablets and larger mobile devices) */
+@media (max-width: 767px) {
+  
+  /* Service Section */
+  .service-container h3 {
+    font-size: 28px;
+  }
+  .service-container p {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  /* Bottom Block - Services */
+  .bottom-block {
+    padding: 2rem 1.5rem;
+  }
+  .bottom-block h3 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .bottom-block p {
+    font-size: 14px;
+  }
+  .bottom-block i {
+    font-size: 22px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  /* Blog Section */
+  .bsblog .blog-grid-1 {
+    margin: 20px 0;
+  }
+  .bsblog .course-details {
+    padding: 20px;
+  }
+  .bsblog .course-desc {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .bsblog .course-price-badge {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  /* Footer */
+  .bsfooter h6.footer-title-29 {
+    font-size: 18px;
+  }
+  .bsfooter input[type="email"] {
+    width: 100%;
+    padding: 12px;
+  }
+  .bsfooter button {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Devices up to 480px (small mobile devices) */
+@media (max-width: 480px) {
+
+  /* Service Section */
+  .service-container h3 {
+    font-size: 24px;
+  }
+  .service-container p {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  /* Bottom Block - Services */
+  .bottom-block {
+    padding: 1.5rem 1rem;
+  }
+  .bottom-block h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .bottom-block p {
+    font-size: 12px;
+  }
+  .bottom-block i {
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  /* Blog Section */
+  .bsblog .course-desc {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .bsblog .course-price-badge {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  /* Footer */
+  .bsfooter h6.footer-title-29 {
+    font-size: 16px;
+  }
+  .bsfooter input[type="email"] {
+    width: 100%;
+    padding: 10px;
+  }
+  .bsfooter button {
+    width: 100%;
+    padding: 8px;
+  }
+  
+  /* Feature Section */
+  .bsfeat .grids_info {
+    grid-auto-flow: row;
+    text-align: center;
+  }
+  .bsfeat .grids_info i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+  }
+  .bsfeat .grids_info h4 {
+    font-size: 18px;
+  }
+}
+
